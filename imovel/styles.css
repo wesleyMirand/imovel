@@ -1,0 +1,376 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B2653;
+    padding: 1rem;
+}
+
+.menu .logo {
+    color: #FE6613;
+    font-size: 1.5rem;
+}
+
+.menu .hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #FE6613;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Corretores Section */
+
+.corretores-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.corretor {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.corretor-img {
+    width: 120px;  /* Tamanho ajustado para as imagens */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.corretor-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.corretor-info h3 {
+    font-size: 1.5em;
+    color: #2c3e50; /* Cor ajustada para o título */
+    margin: 0;
+}
+
+.corretor-info p {
+    font-size: 1.2em;
+    color: #8a8a8a; /* Cor ajustada para os pontos */
+    margin: 5px 0;
+}
+
+.ver-telefone-container {
+    display: flex;
+    align-items: center;
+}
+
+.ver-telefone {
+    background-color: transparent;
+    border: none;
+    color: #e74c3c; /* Cor do botão "Ver Telefone" */
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.ver-telefone:hover {
+    text-decoration: underline;
+}
+
+.telefone-formatado {
+    display: none;
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+
+
+
+
+/* Outras Seções (mantidas como estão) */
+/* ... */
+
+/* Form Section */
+.form-section {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.form-section h2 {
+    margin-bottom: 1rem;
+}
+
+#contactForm input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contactForm button {
+    background-color: #FE6613;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Calculation Section */
+.calculation-section {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o botão à esquerda */
+    gap: 1rem; /* Espaço entre os elementos principais */
+}
+
+.calculation-section h3 {
+    margin-bottom: 1rem;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dois inputs por linha */
+    gap: 10px; /* Espaço entre os inputs */
+    width: 100%; /* Garante que o grid utilize toda a largura disponível */
+}
+
+.input-grid input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%; /* Faz com que os inputs preencham a largura da célula do grid */
+    text-align: center;
+}
+
+#calculateBtn {
+    background-color: #FE6613;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start; /* Mantém o botão alinhado à esquerda */
+}
+
+
+
+
+
+
+/* Aumenta o campo de comentário */
+.form-section input#subject {
+    height: 100px; /* Aumenta a altura do campo de assunto */
+    width: 100%; /* Ajusta para ocupar a largura total */
+    margin-bottom: 1rem; /* Espaço extra abaixo do campo */
+}
+
+
+/* Modal Section */
+.modal-container {
+    text-align: center;
+    margin-top: 2rem;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.modal-btn {
+    background-color: #FE6613;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Download Section */
+.download-container {
+    text-align: center;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.download-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.download-animation {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.download-overlay {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para centralizar exatamente no meio */
+    background-color: rgba(254, 102, 19, 0.8); /* Fundo laranja */
+    color: white; /* Texto branco */
+    padding: 0.5rem 1rem; /* Tamanho do quadrado */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Botão de Download abaixo da imagem */
+.download-button {
+    display: inline-block;
+    background-color: #FE6613; /* Cor de fundo laranja */
+    color: white; /* Texto branco */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%; /* Faz com que o botão ocupe toda a largura do container */
+}
+
+/* Last Image Section */
+.last-image-section {
+    text-align: center;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.last-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Copyright Section */
+.copyright-section {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1B2653;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+/* Seção de vídeo */
+.video-section {
+    text-align: center;
+    margin-top: 2rem;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.video-container {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden; /* Para garantir que as bordas arredondadas apareçam */
+}
+
+.video-content {
+    width: 100%; /* O vídeo ocupará 100% da largura do contêiner */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    max-width: 800px; /* Defina um limite máximo de largura */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+}

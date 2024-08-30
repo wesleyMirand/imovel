@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Front-End | Imovel Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+            <div class="logo">Imovel Guide</div>
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="#">Condomínios</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Guia</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Cotar Imóvel</a></li>
+                <li><a href="#">Planos</a></li>
+                <li><a href="#">Entrar</a></li>
+                <li><a href="#">CADASTRE-SE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Corretores Section -->
+
+        <section class="corretores-section">
+            <div class="corretor">
+                <img src="mulher.PNG" alt="Corretora 1" class="corretor-img">
+                <div class="corretor-info">
+                    <h3>Nome Corretora</h3>
+                    <p>3.000 pontos</p>
+                    <div class="ver-telefone-container">
+                        <button class="ver-telefone" onclick="toggleTelefone(this)">Ver Telefone</button>
+                        <p class="telefone-formatado">(99) 99999-9999</p>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="corretor">
+                <img src="homem.PNG" alt="Corretor 2" class="corretor-img">
+                <div class="corretor-info">
+                    <h3>Nome Corretor</h3>
+                    <p>1.260 pontos</p>
+                    <div class="ver-telefone-container">
+                        <button class="ver-telefone" onclick="toggleTelefone(this)">Ver Telefone</button>
+                        <p class="telefone-formatado">(99) 99999-9999</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Mande uma mensagem:</h2>
+            <form id="contactForm">
+                <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+                <input type="text" id="phone" placeholder="Digite seu telefone" required>
+                <input type="text" id="subject" placeholder="Digite o assunto" required>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <!-- Calculation Section -->
+        <section class="calculation-section">
+            <h3>Regra de 3</h3>
+            <div class="input-grid">
+                <input type="number" id="valueA" placeholder="Valor A" required>
+                <input type="number" id="valueB" placeholder="Valor B" required>
+                <input type="number" id="valueC" placeholder="Valor C" required>
+                <input type="number" id="valueD" placeholder="Valor D" required>
+            </div>
+            <button id="calculateBtn">Calcular</button>
+        </section>
+
+        <!-- Modal Section -->
+        <section class="download-section">
+            <div class="download-container">
+                <div class="download-animation">
+                    <!-- Imagem com o texto sobreposto -->
+                    <img src="imovelimg.PNG" alt="Imagem para Download" class="download-img">
+                </div>
+                <!-- Botão de download abaixo da imagem -->
+                <button id="downloadImageBtn" class="download-button">ABRIR IMAGEM NO MODAL</button>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download-section">
+            <div class="download-container">
+                <div class="download-animation">
+                    <!-- Imagem com o texto sobreposto -->
+                    <img src="imovelimg.PNG" alt="Imagem para Download" class="download-img">
+                    <div class="download-overlay">
+                        <p>Imovel Guide</p>
+                    </div>
+                </div>
+                <!-- Botão de download abaixo da imagem -->
+                <button id="downloadImageBtn" class="download-button">Download</button>
+            </div>
+        </section>
+
+        <!-- Last Image Section (Agora é uma seção de vídeo) -->
+        <section class="video-section">
+            <div class="video-container">
+                <!-- Exibe o vídeo diretamente na página -->
+                <video class="video-content" id="videoPlayer" controls>
+                    <source src="imovel.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </section>
+
+        <!-- Copyright Section (isolada) -->
+        <section class="copyright-section">
+            <p>&copy; Copyright 2022. Todos os direitos reservados.</p>
+        </section>
+    </main>
+
+    <!-- Include html2canvas library -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Include your JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
